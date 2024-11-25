@@ -15,7 +15,7 @@ export default function LayoutDynamic(props) {
     return (
         <>
             <h3>LayoutDynamic.js Routing Practice</h3>
-            <Link href={"/"}>Home</Link> | <Link href={"/about"}>About</Link> | <Link href={"/dashboard"}>Dashboard (index)</Link> | <Link href={"/dashboard/preferences"}>Dashboard (preferences)</Link> | <Link href={"/readingQueryParamProducts"}>Products</Link>
+            <Link href={"/"}>Home</Link> | <Link href={"/about"}>About</Link> | <Link href={"/dashboard"}>Dashboard (index)</Link> | <Link href={"/dashboard/preferences"}>Dashboard (preferences)</Link> | <Link href={"/readingQueryParamProducts?page=1&category=stationary&category=office"}>Products</Link>
             <hr />
             <br />
             {props.children}

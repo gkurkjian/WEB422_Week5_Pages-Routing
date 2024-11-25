@@ -1,7 +1,23 @@
+import { useRouter } from "next/router";
+
 export default function ReadingQueryParamProduct() {
-    return (
-        <>
-            Products
-        </>
-    );
+
+    const router = useRouter();
+    const { page } = router.query;
+    const { category } = router.query;
+
+    if (page && category) {
+        return (
+            <>
+                Products for page: {page} &amp; category: {category.join(', ')} 
+            </>
+        )
+    }
+    else {
+        return (
+            <>
+                Page and category Parameter Required
+            </>
+        )
+    }
 }
